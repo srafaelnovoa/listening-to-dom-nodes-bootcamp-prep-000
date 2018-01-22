@@ -55,6 +55,12 @@ let divs = document.querySelectorAll('div')
 function capture(e) {
   console.log(this.firstChild.nodeValue.trim() + ' captured')
 }
+function bubble(e) {
+  // stop! that! propagation!
+  e.stopPropagation()
+ 
+  console.log(this.firstChild.nodeValue.trim() + ' bubbled')
+}
 
     </script>
   </body>
